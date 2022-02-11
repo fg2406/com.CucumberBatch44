@@ -1,9 +1,10 @@
-Feature: US1001_amazon_search
+Feature: US1001 amazon search
 
- Scenario: TC01_Amazon Search Testi
+ Scenario: TC01_Amazon Search Testi   //Scebario yeni bir run acar,yeniden baslatir
+
    Given kullanici amazon sayfasina gider
    And iPhone icin arama yapar
-   Then sonuclarin Iphone icerdigini test eder
+   Then sonuclarin iPhone icerdigini test eder
 
    Given kullanici amazon sayfasina gider
    And tea pot icin arama yapar
