@@ -7,9 +7,12 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)  //runner in cucumber ile calismasini saglar bu uyum
 @CucumberOptions(
-    features ="src/test/resources/features",  //bilgisayarsaki features in yolunu koy
-    glue="src/test/java/stepdefinitions",  //yapistirici demek glue,features ile nereyi yapistirayim(calistiracak birlikte)
-    tags ="@parametreliTest",          //buraya features teki feature icine senario nun ustune yazilian yazilir
+
+
+        plugin={"html:target\\cucumber-reports.html"}, //raporlama icin bunu eklemek yeterli,burdan calistirinca  html raporu tager altinda olusur
+        features ="src/test/resources/features",  //bilgisayarsaki features in yolunu koy
+        glue="stepdefinitions",  //yapistirici demek glue,features ile nereyi yapistirayim(calistiracak birlikte)
+        tags ="@Editor",          //buraya features teki feature icine senario nun ustune yazilian yazilir
         dryRun=false
 )
 

@@ -3,14 +3,13 @@ package stepdefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HMCPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
-public class HotelMyCampStepDefinitions {
-
-
+public class HotelMyCampDefinitions {
 
     HMCPage hmcPage=new HMCPage();
 
@@ -47,9 +46,32 @@ public class HotelMyCampStepDefinitions {
         Assert.assertTrue(hmcPage.girisYapilamadiYaziElementi.isDisplayed());
 
     }
-    //burda sayfayi kapatir yok ama festures te ki kapatir calisti,cunku amazonStep te vardi genel
-    // olarak yazilmisti onu kullanabiliriz,bir tane stepDefini varsa o kullanilabilir
-    //mesela String sayfaya gider,genel bir kavram onu da onceki steplerden kullanilir
-    //ama nutella aratilir dersek ayrinti varsa nereden oldugu belirtilir
 
+
+    @Then("scenario outline'dan kullanici adi olarak {string} yazar")
+    public void scenarioOutlineDanKullaniciAdiOlarakYazar(String username) {
+        hmcPage.usernameTextBox.sendKeys(username);
+    }
+
+    @And("scenario outline'dan password olarak {string} yazar")
+    public void scenarioOutlineDanPasswordOlarakYazar(String password) {
+        hmcPage.passwordTextBox.sendKeys(password);
+    }
+
+
+    @When("scenario outline'den {string} yazar")
+    public void scenarioOutlineDenYazar(String username) {
+      hmcPage.usernameTextBox.sendKeys(username);
+    }
+
+    @And("scenario outline'dan {string} yazar")
+    public void scenarioOutlineDanYazar(String password) {
+     hmcPage.passwordTextBox.sendKeys(password);
+
+    }
+
+    @Given("kullanici {string} sayfasina gider")
+    public void kullaniciSayfasinaGider(String istenenUrl) {
+        Driver.getDriver().get(ConfigReader.getProperty(istenenUrl));
+    }
 }

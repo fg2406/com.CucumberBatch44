@@ -75,12 +75,12 @@ public class AmazonStepDefinitions {
        }
 
 
-    @Given("kullanici {string} sayfasina gider")
+    /*@Given("kullanici {string} sayfasina gider")
     public void kullaniciSayfasinaGider(String istenenUrl) {
     Driver.getDriver().get(istenenUrl);
 
 
-    }
+    }*/
 }
 
 
