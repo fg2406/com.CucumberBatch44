@@ -13,6 +13,7 @@ Feature: US1010 Herokuapp sayfasinda add butonu testi
     Then Delete butonuna gorununceye kadar bekler
     And Delete butonunun gorundugunu test eder
     Then Delete butonuna basarak butonu siler
+   And 5 sayniye bekler
     And sayfayi kapatir
 
 

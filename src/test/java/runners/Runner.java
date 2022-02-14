@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         plugin={"html:target\\cucumber-reports.html"}, //raporlama icin bunu eklemek yeterli,burdan calistirinca  html raporu tager altinda olusur
         features ="src/test/resources/features",  //bilgisayarsaki features in yolunu koy
         glue="stepdefinitions",  //yapistirici demek glue,features ile nereyi yapistirayim(calistiracak birlikte)
-        tags ="@Hero",          //buraya features teki feature icine senario nun ustune yazilian yazilir
+        tags ="@WebU",          //buraya features teki feature icine senario nun ustune yazilian yazilir
         dryRun=false
 )
 
