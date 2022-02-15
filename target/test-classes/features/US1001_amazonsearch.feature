@@ -1,5 +1,5 @@
 Feature: US1001 amazon search
-
+ @paralel2
  Scenario: TC01_Amazon Search Testi   //Scebario yeni bir run acar,yeniden baslatir
 
    Given kullanici amazon sayfasina gider

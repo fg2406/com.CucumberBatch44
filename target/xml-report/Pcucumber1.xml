@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="33.876">
+    <testcase classname="US1003 parametre ile stepdefinitions olusturma" name="TC05_parametre kullanimi   # parametre icin aranacak yer tirnak icine alinir" time="33.205">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+            <![CDATA[Given kullanici amazon sayfasina gider......................................passed
+And "iPhone" icin arama yapar...............................................passed
+Then sonuclarin "iPhone" icerdigini test eder...............................passed
+And ana sayfayi kapatir.....................................................undefined
+]]>
+        </failure>
+    </testcase>
+</testsuite>

@@ -1,5 +1,6 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -14,7 +15,7 @@ import java.util.Set;
 
 public class WebUniversityStepDefinitions {
 
-      JavascriptExecutor jsc=(JavascriptExecutor) Driver.getDriver();
+     // JavascriptExecutor jsc=(JavascriptExecutor) Driver.getDriver();
        WebUniversityPage webUniversityPage=new WebUniversityPage();
       Actions actions=new Actions(Driver.getDriver());
 
@@ -72,14 +73,10 @@ public class WebUniversityStepDefinitions {
 
     }
 
-    @Then("Ilk sayfaya geri doner")
-    public void ılk_sayfaya_geri_doner() {
-        ReusableMethods.switchToWindow("webdriveruniversity.com");
 
-    }
 
     @Then("Ilk sayfaya donuldugunu test eder")
-    public void ılk_sayfaya_donuldugunu_test_eder() {
+    public void ilk_sayfaya_donuldugunu_test_eder() {
 
         String handle1=Driver.getDriver().getWindowHandle();
         Set<String> handleDegerrleri=Driver.getDriver().getWindowHandles();
@@ -106,8 +103,10 @@ public class WebUniversityStepDefinitions {
     }
 
 
+    @And("Ilk sayfaya geri doner")
+    public void ilkSayfayaGeriDoner() {
 
-
+    }
 }
 
 

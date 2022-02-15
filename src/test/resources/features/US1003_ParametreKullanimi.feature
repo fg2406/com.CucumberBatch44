@@ -2,7 +2,7 @@
 Feature:US1003 parametre ile stepdefinitions olusturma
 
 
-
+@paralel1
   Scenario:  TC05_parametre kullanimi   # parametre icin aranacak yer tirnak icine alinir
 
     Given kullanici amazon sayfasina gider

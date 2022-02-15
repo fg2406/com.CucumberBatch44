@@ -1,6 +1,5 @@
 Feature: US1005 Positive login testi
 
-  @hotel
   Scenario: TC08 Positive login
 
 
