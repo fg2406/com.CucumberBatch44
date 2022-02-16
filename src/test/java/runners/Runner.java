@@ -8,12 +8,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)  //runner in cucumber ile calismasini saglar bu uyum
 @CucumberOptions(
 
-        plugin={"html:target\\Pcucumber-reports1.html",
-                "json:target/json-reports/Pcucumber1.json",
-                "junit:target/xml-report/Pcucumber1.xml"}, //raporlama icin bunu eklemek yeterli,burdan calistirinca  html raporu tager altinda olusur
+        plugin={"html:target\\cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"}, //raporlama icin bunu eklemek yeterli,burdan calistirinca  html raporu tager altinda olusur
         features ="src/test/resources/features",  //bilgisayarsaki features in yolunu koy
         glue="stepdefinitions",  //yapistirici demek glue,features ile nereyi yapistirayim(calistiracak birlikte)
-        tags ="@DemoGuru",          //buraya features teki feature icine senario nun ustune yazilian yazilir
+        tags ="@Dinamik",          //buraya features teki feature icine senario nun ustune yazilian yazilir
         dryRun=false
 )
 
