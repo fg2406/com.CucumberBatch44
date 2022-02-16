@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/Pcucumber1.xml"}, //raporlama icin bunu eklemek yeterli,burdan calistirinca  html raporu tager altinda olusur
         features ="src/test/resources/features",  //bilgisayarsaki features in yolunu koy
         glue="stepdefinitions",  //yapistirici demek glue,features ile nereyi yapistirayim(calistiracak birlikte)
-        tags ="@WebU",          //buraya features teki feature icine senario nun ustune yazilian yazilir
+        tags ="@DemoGuru",          //buraya features teki feature icine senario nun ustune yazilian yazilir
         dryRun=false
 )
 
@@ -34,3 +34,8 @@ public class Runner {  //runWith yazinca yesil calistirma cikti
 
 // sirali calistirma mumkun,tags kismina ayni isimleri verirsek sirayla calistirir
 //ama birde ayni anda farkli browser lerde paralel calistirmak istiyorsak farkli bir yontem var
+
+// paralel testing cucumber icin pom.xml extra birseyler ekledik
+//sonra kac tane ayni anda calissin istiyorsak paralel1,paralel2.... gibi runner aciyoruz
+//tags larina yazip features ayni ismi veriyoruz ,terminalden calistiriyorz
+//mvn clean verify yazip calistiriyoruz
